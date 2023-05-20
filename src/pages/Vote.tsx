@@ -3,14 +3,20 @@ import { IcLanding } from "../assets";
 import { useNavigate, useParams } from "react-router-dom";
 import { VOTE } from "../constants/vote";
 import { useState, useEffect } from "react";
+import { useRecoilState } from "recoil";
+import { inputState } from "../recoil/atom";
 
 const Vote = () => {
   const { id } = useParams();
+  // const [isVote, setIsVote] = useState([]);
   const voteId = parseInt(id!);
+  const [isVote, setIsVote] = useRecoilState(inputState);
   const navigate = useNavigate();
   const [go, setGo] = useState(false);
   const [pass, setPass] = useState(false);
   const [next, setNext] = useState(false);
+
+  const copyVoteList = [...isVote.vote];
 
   useEffect(() => {
     setGo(false);
@@ -20,8 +26,13 @@ const Vote = () => {
 
   const handleMoveVotePage = (voteId: number) => {
     navigate(`/vote/${voteId + 1}`);
-
-    if (voteId === 5) {
+    if (go === true) {
+      copyVoteList.push(true);
+    } else {
+      copyVoteList.push(false);
+    }
+    setIsVote({ ...isVote, vote: copyVoteList });
+    if (voteId === 13) {
       navigate("/final");
     }
   };

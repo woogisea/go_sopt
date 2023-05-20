@@ -26,4 +26,44 @@ export const VOTE = [
     src: IcTeam,
     name: "5",
   },
+  {
+    id: 6,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 7,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 8,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 9,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 10,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 11,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 12,
+    src: IcTeam,
+    name: "5",
+  },
+  {
+    id: 13,
+    src: IcTeam,
+    name: "5",
+  },
 ];

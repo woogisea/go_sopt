@@ -2,9 +2,21 @@ import styled from "styled-components";
 import { IcFinal } from "../assets";
 import { useRecoilValue } from "recoil";
 import { inputState } from "../recoil/atom";
+import { postVote } from "../lib/api/vote";
+import { useNavigate } from "react-router-dom";
 
 const Final = () => {
-  const username = useRecoilValue(inputState);
+  const { username, part, vote } = useRecoilValue(inputState);
+  const navigate = useNavigate();
+
+  const handleSubmitVote = async () => {
+    const response = await postVote({ username, part, vote });
+    console.log(response?.data.code);
+    if (response?.data.code === 201) {
+      alert(`${response?.data.message}`);
+      navigate("/");
+    }
+  };
   return (
     <StWrapper>
       <StTitle>{username}</StTitle>
@@ -22,7 +34,9 @@ const Final = () => {
       </StTextBlock>
       <StAlertText>제출하기 버튼을 반드시 눌러주세요.</StAlertText>
       <img src={IcFinal} alt="final" />
-      <StBtn type="button">제출하기</StBtn>
+      <StBtn type="button" onClick={handleSubmitVote}>
+        제출하기
+      </StBtn>
     </StWrapper>
   );
 };

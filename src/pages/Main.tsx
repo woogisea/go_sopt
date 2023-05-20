@@ -9,21 +9,23 @@ import { useNavigate } from "react-router-dom";
 const TEXT = "즐거우셨나요? \n 투표를 위해 입력해주세요!";
 
 const Main = () => {
-  const [username, setUsername] = useState("");
+  const [userId, setUsername] = useState("");
   const [part, setPart] = useState("");
   const [isActive, setIsActive] = useState(false);
   const [isAtom, setIsAtom] = useRecoilState(inputState);
 
   const navigate = useNavigate();
 
-  console.log(isAtom);
+  const { username } = isAtom;
+
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name } = e.target;
     if (name === "username") {
       setUsername(e.target.value);
-      setIsAtom(e.target.value);
+      setIsAtom({ ...isAtom, username: e.target.value });
     } else {
       setPart(e.target.value);
+      setIsAtom({ ...isAtom, part: e.target.value });
     }
   };
 
@@ -46,7 +48,7 @@ const Main = () => {
         type="text"
         name="username"
         placeholder="이름을 입력하세요"
-        value={username}
+        value={userId}
         onChange={handleInput}
       />
       <StStyleInput

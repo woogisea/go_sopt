@@ -5,7 +5,7 @@ import { IcLanding } from "../assets";
 import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
-  const username = useRecoilValue(inputState);
+  const { username } = useRecoilValue(inputState);
   const navigate = useNavigate();
 
   const handleNavigateVote = () => {
