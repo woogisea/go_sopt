@@ -11,7 +11,6 @@ const Final = () => {
 
   const handleSubmitVote = async () => {
     const response = await postVote({ username, part, vote });
-    console.log(response?.data.code);
     if (response?.data.code === 201) {
       alert(`${response?.data.message}`);
       navigate("/");

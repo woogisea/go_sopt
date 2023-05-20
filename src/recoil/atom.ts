@@ -15,7 +15,21 @@ export const inputState = atom<InputInfo>({
   default: {
     username: "",
     part: "",
-    vote: [],
+    vote: [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+    ],
   },
 
   effects_UNSTABLE: [persistAtom],

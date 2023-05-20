@@ -26,9 +26,9 @@ const Vote = () => {
   const handleMoveVotePage = (voteId: number) => {
     navigate(`/vote/${voteId + 1}`);
     if (go === true) {
-      copyVoteList.push(true);
+      copyVoteList[voteId - 1] = true;
     } else {
-      copyVoteList.push(false);
+      copyVoteList[voteId - 1] = false;
     }
     setIsVote({ ...isVote, vote: copyVoteList });
     if (voteId === 13) {
@@ -58,7 +58,7 @@ const Vote = () => {
     <StWrapper>
       <img src={IcLanding} alt="landing" />
       <StTitleBlock>
-        <img src={VOTE[voteId - 1].src} alt="" />
+        <img src={VOTE[voteId - 1].src} alt="" width={119} />
         <StVoteTitle>{VOTE[voteId - 1].name}</StVoteTitle>
       </StTitleBlock>
       <StVoteBlock>
@@ -103,7 +103,7 @@ const StVoteTitle = styled.span`
   font-family: "DOSGothic";
   font-style: normal;
   font-weight: 500;
-  font-size: 3.4rem;
+  font-size: 2rem;
   line-height: 4.7rem;
 
   color: ${({ theme }) => theme.colors.Color_Blue};
