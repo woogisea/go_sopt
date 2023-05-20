@@ -39,6 +39,8 @@ const Vote = () => {
   useEffect(() => {
     if (go || pass) {
       setNext(true);
+    } else {
+      setNext(false);
     }
   }, [go, pass]);
 
