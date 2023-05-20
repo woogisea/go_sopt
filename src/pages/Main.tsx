@@ -16,6 +16,7 @@ const Main = () => {
 
   const navigate = useNavigate();
 
+  console.log(isAtom);
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name } = e.target;
     if (name === "username") {
