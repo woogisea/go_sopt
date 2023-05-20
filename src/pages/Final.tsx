@@ -19,7 +19,7 @@ const Final = () => {
   };
   return (
     <StWrapper>
-      <StTitle>{username}</StTitle>
+      <StTitle>{username}님!</StTitle>
       <StDes>수고하셨습니다!</StDes>
       <StTextBlock>
         <StText>Hello World ! 즐거우셨나요?</StText>

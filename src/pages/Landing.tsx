@@ -14,7 +14,7 @@ const Landing = () => {
   return (
     <StWrapper>
       <img src={IcLanding} alt="landing" />
-      <StNameField>Hello, {username}!</StNameField>
+      <StNameField>Hello, {username}님!</StNameField>
       <StDes>
         <span>그럼 솝커톤 투표를</span>
         <span>시작해볼까요?</span>
