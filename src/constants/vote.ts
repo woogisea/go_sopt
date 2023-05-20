@@ -18,7 +18,7 @@ export const VOTE = [
   {
     id: 1,
     src: Ic1,
-    name: "나의 감정 프린터",
+    name: "마음 사진관",
   },
   {
     id: 2,
@@ -28,17 +28,17 @@ export const VOTE = [
   {
     id: 3,
     src: Ic3,
-    name: "For you, 표류병",
+    name: "표류병",
   },
   {
     id: 4,
     src: Ic4,
-    name: "참, 외롭다",
+    name: "참,외롭다",
   },
   {
     id: 5,
     src: Ic5,
-    name: "오작교",
+    name: "DAWNNECT",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ export const VOTE = [
   {
     id: 7,
     src: Ic7,
-    name: "왓플",
+    name: "동네포착",
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ export const VOTE = [
   {
     id: 10,
     src: Ic10,
-    name: "I GO BOSS(아이고 사장님)",
+    name: "IGO BOSS",
   },
   {
     id: 11,
@@ -73,11 +73,11 @@ export const VOTE = [
   {
     id: 12,
     src: Ic12,
-    name: "원포유(가안)",
+    name: "싱글벙글",
   },
   {
     id: 13,
     src: Ic13,
-    name: "소문나: 소음의 문제는 나!",
+    name: "소문나",
   },
 ];
