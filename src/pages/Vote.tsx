@@ -8,7 +8,6 @@ import { inputState } from "../recoil/atom";
 
 const Vote = () => {
   const { id } = useParams();
-  // const [isVote, setIsVote] = useState([]);
   const voteId = parseInt(id!);
   const [isVote, setIsVote] = useRecoilState(inputState);
   const navigate = useNavigate();
