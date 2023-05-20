@@ -106,6 +106,8 @@ const StTextBlock = styled.div`
 `;
 const StText = styled.p`
   font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
